@@ -9,7 +9,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const ApiURI = "https://apollo-graphql-todo.glitch.me/graphql"; //replace with your own graphql URI
+const ApiURI = "https://metaphysics-staging.artsy.net";
 
 const cache = new InMemoryCache({
 

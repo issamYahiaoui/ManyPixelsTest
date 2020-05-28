@@ -15,12 +15,8 @@ const App = () => {
       <Header />
       <Router>
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/profile/:id">
-            <Profile />
-          </Route>
+          <Route exact path="/" component={Home} />
+          <Route path="/profile/:id" component={Profile} />
         </Switch>
       </Router>
     </div >
