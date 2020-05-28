@@ -2,6 +2,7 @@
   "name": "test",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://issamYahiaoui.github.io/ManyPixelsTest",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -9,6 +10,7 @@
     "antd": "^4.2.5",
     "apollo-boost": "^0.4.9",
     "apollo-cache-inmemory": "^1.6.6",
+    "gh-pages": "^2.2.0",
     "graphql": "^15.0.0",
     "graphql-tag": "^2.10.3",
     "react": "^16.13.1",
@@ -23,7 +25,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
