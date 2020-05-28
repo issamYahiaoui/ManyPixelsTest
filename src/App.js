@@ -7,18 +7,19 @@ import {
 
 import Home from './containers/Home'
 import Profile from './containers/Profile'
-import Header from './components/Header'
+import Layout from './components/Layout'
 
 const App = () => {
   return (
     <div>
-      <Header />
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/profile/:id" component={Profile} />
-        </Switch>
-      </Router>
+      <Layout>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/profile/:id" component={Profile} />
+          </Switch>
+        </Router>
+      </Layout>
     </div >
   );
 }

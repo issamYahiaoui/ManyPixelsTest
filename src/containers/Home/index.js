@@ -1,9 +1,16 @@
 import React from 'react'
 import { useQuery } from "react-apollo"
 
+import styled from 'styled-components'
+
+
 import { GET_POPULAR_ARTISTS } from '../../queries'
 
-
+const Container = styled.div`
+  display: flex;
+  justify-content : center;
+  align-items: center ;
+`
 
 const Home = () => {
   const {
@@ -15,9 +22,9 @@ const Home = () => {
   if (error) return <p>ERROR</p>;
   if (!data) return <p>No Data</p>;
   return (
-    <div>
+    <Container>
       <p>{JSON.stringify(data)}</p>
-    </div >
+    </Container >
   )
 }
 export default Home
