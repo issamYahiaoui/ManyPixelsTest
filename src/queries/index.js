@@ -9,7 +9,6 @@ const GET_POPULAR_ARTISTS = gql`
       name,
       nationality,
       imageUrl
-    
     } 
   }
   }

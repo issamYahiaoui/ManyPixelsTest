@@ -1,6 +1,5 @@
 import React from 'react'
 import { useQuery } from "react-apollo"
-import styled from 'styled-components'
 
 import {
   Descriptions,

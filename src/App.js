@@ -12,7 +12,6 @@ import Layout from './components/Layout'
 const App = () => {
   return (
     <div>
-
       <Router>
         <Layout>
           <Switch>
@@ -21,7 +20,6 @@ const App = () => {
           </Switch>
         </Layout>
       </Router>
-
     </div >
   );
 }
