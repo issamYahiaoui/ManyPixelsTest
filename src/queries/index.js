@@ -26,6 +26,7 @@ const GET_ARTIST_PROFILE = gql`
       deathday,
       nationality,
       imageUrl,
+      gender,
       artworks{
         id,
         title,

@@ -12,27 +12,17 @@ import {
 } from 'antd'
 
 import { GET_ARTIST_PROFILE } from '../../queries'
+import { ArtworksContainer, Container } from '../../components/Profile'
 
 
 const { Item } = Descriptions
 const { Meta } = Card
 
-const Container = styled.div`
-  width: 90%;
-  margin: 2% 0
-`
-
-const ArtworksContainer = styled.div`
-  margin: 2%;
-  display: center;
-  justify-content: center;
-  align-items: center
-`
 
 
 const Profile = (props) => {
+
   const id = props.match.params.id
-  console.log({ id })
 
   const {
     data,
@@ -47,7 +37,7 @@ const Profile = (props) => {
   if (!data) return <Empty />;
 
 
-  const { name, bio, nationality, birthday, deathday, imageUrl, artworks, years } = data.artist
+  const { name, bio, nationality, birthday, gender, deathday, imageUrl, artworks, years } = data.artist
 
 
   return (
@@ -68,11 +58,11 @@ const Profile = (props) => {
             <Item label="Years">{years || 'N/A'}</Item>
             <Item label="Birthday">{birthday || 'N/A'}</Item>
             <Item label="Deathday">{deathday || 'N/A'}</Item>
+            <Item label="gender">{gender || 'N/A'}</Item>
           </Descriptions>
           <br />
           <Descriptions>
             <Item label="Bio">{bio || 'N/A'}</Item>
-
           </Descriptions>
         </Col>
 
@@ -82,8 +72,10 @@ const Profile = (props) => {
 
         <h1>Art Works</h1>
         <Row glutter={[16, 16]}>
+          { !data &&  <Empty />}
           {
-            artworks.map(artwork =>
+             artworks && 
+             artworks.map(artwork =>
               <Col key={artwork.id} md={6} sm={12} xs={24}>
                 <Card
                   style={{ width: 140, margin: '3%' }}
