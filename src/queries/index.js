@@ -7,7 +7,9 @@ const GET_POPULAR_ARTISTS = gql`
     artists {
       id,
       name,
-      bio,
+      nationality,
+      imageUrl
+    
     } 
   }
   }
@@ -16,7 +18,19 @@ const GET_POPULAR_ARTISTS = gql`
 const GET_ARTIST_PROFILE = gql`
  query ARTIST_PROFILE($id: String!) {
     artist(id: $id) {
-      id
+      id,
+      name,
+      bio,
+      years,
+      birthday,
+      deathday,
+      nationality,
+      imageUrl,
+      artworks{
+        id,
+        title,
+        imageUrl
+      }
     }
   }
 `;
