@@ -1,22 +1,35 @@
 import React from 'react'
 import { Layout } from 'antd';
+import styled from 'styled-components'
 
 import Header from '../Header'
-import Footer from '../Footer'
+
 
 const { Content } = Layout;
 
 
+const Wrapper = styled(Layout)`
+  background-color: white;
+  width: 100%;
+ 
+`
+
+const Container = styled(Content)`
+   padding: 2%; 
+   display: flex;
+    justify-content: center;
+    align-items: center
+`
+
 
 const BaseLayout = ({ children }) => {
   return (
-    <Layout>
+    <Wrapper>
       <Header />
-      <Content>
+      <Container>
         {children}
-      </Content>
-      <Footer />
-    </Layout>
+      </Container>
+    </Wrapper>
   )
 }
 

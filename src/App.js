@@ -12,14 +12,16 @@ import Layout from './components/Layout'
 const App = () => {
   return (
     <div>
-      <Layout>
-        <Router>
+
+      <Router>
+        <Layout>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/profile/:id" component={Profile} />
           </Switch>
-        </Router>
-      </Layout>
+        </Layout>
+      </Router>
+
     </div >
   );
 }
