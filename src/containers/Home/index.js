@@ -8,7 +8,9 @@ import styled from 'styled-components'
 import {
   Card,
   Row,
-  Col
+  Col,
+  Spin,
+  Empty
 } from 'antd'
 
 
@@ -29,7 +31,7 @@ const ArtistCard = ({ artist }) => {
     <Link to={`profile/${id}`}>
       <Card
         hoverable
-        style={{ width: 240, margin: '2%' }}
+        style={{ width: 240, margin: '2% 0' }}
         cover={<img alt="example" src={imageUrl} />}
       >
         <Meta title={name} description={nationality} />
@@ -43,13 +45,14 @@ const Home = () => {
     loading,
     error
   } = useQuery(GET_POPULAR_ARTISTS)
-  if (loading) return <p>Loading</p>;
+  if (loading) return <Spin size="large" />;
   if (error) return <p>ERROR</p>;
-  if (!data) return <p>No Data</p>;
-  window.data = data
+  if (!data) return <Empty />;;
+
   return (
     <Container>
-
+      <h1>Popular Artists</h1>
+      <br />
       <Row glutter={[16, 16]}>
         {
           data.popular_artists.artists.map(artist =>

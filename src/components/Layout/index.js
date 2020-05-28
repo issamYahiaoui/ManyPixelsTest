@@ -15,10 +15,12 @@ const Wrapper = styled(Layout)`
 `
 
 const Container = styled(Content)`
-   padding: 2%; 
-   display: flex;
+    padding: 2%; 
+    display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    min-height: 500px
+
 `
 
 
