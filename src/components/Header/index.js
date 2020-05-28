@@ -26,9 +26,12 @@ const BaseHeader = () => {
         </Logo>
       </Link>
       <Menu theme="dark" mode="horizontal" >
-        <Link to="/">
-          <Menu.Item >Home</Menu.Item>
-        </Link>
+        <Menu.Item >
+          <Link to="/">
+            Home
+          </Link>
+        </Menu.Item>
+
       </Menu>
     </Header>
   )
