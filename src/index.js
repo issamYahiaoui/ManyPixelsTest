@@ -1,12 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "react-apollo";
+import { InMemoryCache } from "apollo-cache-inmemory";
+
+
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const ApiURI = "https://apollo-graphql-todo.glitch.me/graphql"; //replace with your own graphql URI
+
+const cache = new InMemoryCache({
+
+});
+
+const client = new ApolloClient({
+  cache,
+  uri: ApiURI
+});
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
