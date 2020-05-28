@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ManyPixelsTest/static/css/main.4c48667a.chunk.css",
+    "main.js": "/ManyPixelsTest/static/js/main.cd586f84.chunk.js",
+    "main.js.map": "/ManyPixelsTest/static/js/main.cd586f84.chunk.js.map",
+    "runtime-main.js": "/ManyPixelsTest/static/js/runtime-main.e8bf186d.js",
+    "runtime-main.js.map": "/ManyPixelsTest/static/js/runtime-main.e8bf186d.js.map",
+    "static/css/2.63b65d4e.chunk.css": "/ManyPixelsTest/static/css/2.63b65d4e.chunk.css",
+    "static/js/2.93db8239.chunk.js": "/ManyPixelsTest/static/js/2.93db8239.chunk.js",
+    "static/js/2.93db8239.chunk.js.map": "/ManyPixelsTest/static/js/2.93db8239.chunk.js.map",
+    "index.html": "/ManyPixelsTest/index.html",
+    "precache-manifest.f208174f6f4874a35459030b1be9c134.js": "/ManyPixelsTest/precache-manifest.f208174f6f4874a35459030b1be9c134.js",
+    "service-worker.js": "/ManyPixelsTest/service-worker.js",
+    "static/css/2.63b65d4e.chunk.css.map": "/ManyPixelsTest/static/css/2.63b65d4e.chunk.css.map",
+    "static/css/main.4c48667a.chunk.css.map": "/ManyPixelsTest/static/css/main.4c48667a.chunk.css.map",
+    "static/js/2.93db8239.chunk.js.LICENSE.txt": "/ManyPixelsTest/static/js/2.93db8239.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e8bf186d.js",
+    "static/css/2.63b65d4e.chunk.css",
+    "static/js/2.93db8239.chunk.js",
+    "static/css/main.4c48667a.chunk.css",
+    "static/js/main.cd586f84.chunk.js"
+  ]
+}
